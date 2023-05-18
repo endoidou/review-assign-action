@@ -41,7 +41,7 @@ async function setAssignees(input, event) {
     await github.setAssignees(event, input.githubToken, assignees);
   }
 
-  console.log(`Set assignees: ${assignees.join(' ')}`);
+  core.info(`Set assignees: ${assignees.join(' ')}`);
 }
 
 async function setReviewers(input, event) {
@@ -78,7 +78,7 @@ async function setReviewers(input, event) {
     await github.setReviewers(event, input.githubToken, reviewers);
   }
 
-  console.log(`Set reviewers: ${reviewers.join(' ')}`);
+  core.info(`Set reviewers: ${reviewers.join(' ')}`);
 }
 
 async function postReadyComment(input, event) {
@@ -106,7 +106,7 @@ async function postReadyComment(input, event) {
     await github.postComment(event, input.githubToken, comment);
   }
 
-  console.log(`Comment: ${comment}`);
+  core.info(`Comment: ${comment}`);
 }
 
 async function postMergedComment(input, event) {
@@ -143,7 +143,7 @@ async function postMergedComment(input, event) {
     await github.postComment(event, input.githubToken, comment);
   }
 
-  console.log(`Comment: ${comment}`);
+  core.info(`Comment: ${comment}`);
 }
 
 module.exports = run;
